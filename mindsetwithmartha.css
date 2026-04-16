@@ -1,0 +1,78 @@
+body {
+    background-color: #0F1720;
+}
+
+.nav-header {
+    border: 1px solid hotpink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-items {
+    display: flex;
+    gap: 30px;
+    border: 1px solid limegreen;
+    font-size: 14px;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.left-nav-item {
+    border: 1px solid orangered;
+}
+
+.nav-button {
+    border-radius: 10px;
+    background-color: white;
+    font-weight: 600;
+}
+
+.partnerships {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin-top: 60px;
+}
+
+.hero-header {
+    color: white;
+}
+
+.hero-paragraph {
+    color: white;
+}
+
+.hero-accreditation {
+    color: white;
+}
+
+.clients-header {
+    display: flex;
+    justify-content: center;
+    color: white;
+    border: 1px solid yellow;
+}
+
+.clients-cards {
+display: flex;
+align-items: center;
+justify-content: space-around;
+border: 1px solid hotpink;
+}
+
+.card-header {
+    color: white;
+}
+
+.card-paragraph {
+    color: white; 
+}
+
+.athletes-card, .business-card, .fitness-card {
+    border: 1px solid blue;
+}
