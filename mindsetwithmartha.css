@@ -1,78 +1,220 @@
 body {
-    background-color: #0F1720;
+    background-color: #14B8A6;
 }
 
-.nav-header {
+.nav {
     border: 1px solid hotpink;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.nav-items {
+.nav-brand {
+    border: 1px solid orangered;
+}
+
+
+.nav-list {
     display: flex;
     gap: 30px;
     border: 1px solid limegreen;
     font-size: 14px;
 }
 
-.nav-items a {
+.nav-item a {
     text-decoration: none;
     color: white;
     font-weight: 600;
 }
 
-.left-nav-item {
-    border: 1px solid orangered;
-}
 
-.nav-button {
+.button-primary {
     border-radius: 10px;
     background-color: white;
     font-weight: 600;
 }
 
-.partnerships {
+
+.hero-title {
+    color: white;
+}
+
+.hero-text {
+    color: white;
+}
+
+.hero-meta {
+    color: white;
+}
+
+.partners {
     display: flex;
     justify-content: center;
     color: white;
     margin-top: 60px;
 }
 
-.hero-header {
-    color: white;
-}
-
-.hero-paragraph {
-    color: white;
-}
-
-.hero-accreditation {
-    color: white;
-}
-
-.clients-header {
+.section-title {
     display: flex;
     justify-content: center;
     color: white;
     border: 1px solid yellow;
+    margin-bottom: 32px;
 }
 
-.clients-cards {
+.clients-wrapper  {
 display: flex;
 align-items: center;
 justify-content: space-around;
 border: 1px solid hotpink;
 }
 
-.card-header {
+.client-card-title {
     color: white;
 }
 
-.card-paragraph {
+.client-card-item {
     color: white; 
 }
 
-.athletes-card, .business-card, .fitness-card {
+.client-card {
     border: 1px solid blue;
 }
+
+.quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quiz-title {
+    color: white;
+}
+
+.quiz-text {
+    color: white;
+}
+
+.quiz-benefits {
+    display: flex;
+}
+
+.quiz-benefit {
+    color: white;
+}
+
+.outcomes {
+    margin-bottom: 60px;
+}
+
+
+.outcomes-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px 32px;
+    color: white;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.outcomes-item {
+    position: relative;
+    text-align: center;
+    padding-left: 24px;
+}
+
+.outcomes-item::before {
+content: "\2713";
+position: absolute;
+left: 40px;
+top: 2px;
+color: #1f9c95;
+font-weight: bold;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 40px; 
+}
+
+.service-card {
+    border: 1px solid greenyellow;
+}
+
+.service-card-title, .service-card-text {
+    color: white;
+}
+
+.one-point-zero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px;
+}
+
+.one-point-zero-text {
+    color: white;
+}
+
+.podcast {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.podcast-text, .platform-text {
+    color: white;
+}
+
+.platform-icons {
+    display: flex;
+    gap: 40px;
+}
+
+
+.button-youtube, .button-spotify {
+    border: 2px solid white;
+    border-radius: 10px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+
+.youtube-icon, .spotify-icon {
+    width: 18px;
+    height: 18px;
+}
+
+
+.testimonial-carousel {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 16px;
+}
+
+.carousel-track {
+    display: flex;
+}
+
+.testimonial-card {
+    border-radius: 24px;
+    border: 1px solid rgba(255 255 255 0.1);
+    background: rgba(255 255 255 0.06);
+    padding: 32px;
+}
+
+.testimonial-card-quote, .testimonial-card-name, .testimonial-card-role {
+    color: white;
+}
+
+.testimonial-card-role {
+    opacity: 0.75;
+}
+
+.news
