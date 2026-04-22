@@ -158,11 +158,6 @@ font-weight: bold;
     color: white;
 }
 
-.podcast {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 .podcast-text, .platform-text {
     color: white;
@@ -217,4 +212,37 @@ font-weight: bold;
     opacity: 0.75;
 }
 
-.news
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid hotpink; 
+}
+
+.newsletter form {
+    border: 2px solid blue;
+    width: 100%;
+    max-width: 400px;
+}
+
+.visually-hidden {
+    display: none;
+}
+
+.newsletter input, .newsletter button {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
