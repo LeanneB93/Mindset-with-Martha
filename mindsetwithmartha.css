@@ -1,5 +1,23 @@
+
+:root {
+    --primary-bg: #0B0F11;
+    --secondary-bg: #12181B;
+   
+    
+    --accent:#14B8A6;
+    --accent-hover: #22B892;
+    --accent-soft: #6FE3C5;
+
+    --primary-text: #F5F7F6;
+    --secondary-text: #C9D1D3;
+
+    
+
+}
+
+
 body {
-    background-color: #14B8A6;
+    background-color: var(--primary-bg);
 }
 
 .nav {
@@ -19,11 +37,12 @@ body {
     gap: 30px;
     border: 1px solid limegreen;
     font-size: 14px;
+    list-style: none;
 }
 
 .nav-item a {
     text-decoration: none;
-    color: white;
+    color: var(--primary-text);
     font-weight: 600;
 }
 
@@ -35,29 +54,21 @@ body {
 }
 
 
-.hero-title {
-    color: white;
-}
-
-.hero-text {
-    color: white;
-}
-
-.hero-meta {
-    color: white;
+.hero-title, .hero-text, .hero-meta {
+    color: var(--primary-text);
 }
 
 .partners {
     display: flex;
     justify-content: center;
-    color: white;
+    color: var(--primary-text);
     margin-top: 60px;
 }
 
 .section-title {
     display: flex;
     justify-content: center;
-    color: white;
+    color: var(--primary-text);
     border: 1px solid yellow;
     margin-bottom: 32px;
 }
@@ -69,12 +80,8 @@ justify-content: space-around;
 border: 1px solid hotpink;
 }
 
-.client-card-title {
-    color: white;
-}
-
-.client-card-item {
-    color: white; 
+.client-card-title, .client-card-item {
+    color: var(--primary-text);
 }
 
 .client-card {
@@ -87,20 +94,12 @@ border: 1px solid hotpink;
     align-items: center;
 }
 
-.quiz-title {
-    color: white;
-}
-
-.quiz-text {
-    color: white;
+.quiz-title, .quiz-text, .quiz-benefit {
+    color: var(--primary-text);
 }
 
 .quiz-benefits {
     display: flex;
-}
-
-.quiz-benefit {
-    color: white;
 }
 
 .outcomes {
@@ -112,7 +111,7 @@ border: 1px solid hotpink;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px 32px;
-    color: white;
+    color: var(--primary-text);
     list-style: none;
     padding: 0;
     margin: 0;
@@ -144,7 +143,7 @@ font-weight: bold;
 }
 
 .service-card-title, .service-card-text {
-    color: white;
+    color: var(--primary-text);
 }
 
 .one-point-zero {
@@ -155,12 +154,12 @@ font-weight: bold;
 }
 
 .one-point-zero-text {
-    color: white;
+    color: var(--primary-text);
 }
 
 
 .podcast-text, .platform-text {
-    color: white;
+    color: var(--primary-text);
 }
 
 .platform-icons {
@@ -176,7 +175,7 @@ font-weight: bold;
     gap: 8px;
     align-items: center;
     text-decoration: none;
-    color: white;
+    color: var(--primary-text);
     padding: 5px;
 }
 
@@ -205,7 +204,7 @@ font-weight: bold;
 }
 
 .testimonial-card-quote, .testimonial-card-name, .testimonial-card-role {
-    color: white;
+    color: var(--primary-text);
 }
 
 .testimonial-card-role {
@@ -217,6 +216,10 @@ font-weight: bold;
     flex-direction: column;
     align-items: center;
     border: 1px solid hotpink; 
+}
+
+.newsletter-text {
+    color: var(--primary-text);
 }
 
 .newsletter form {
@@ -242,7 +245,42 @@ font-weight: bold;
     margin-bottom: 40px;
 }
 
+.cta-text{
+    color: var(--primary-text);
+}
+
 .footer-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
+
+.footer-section {
+    border: 2px solid purple;
+}
+
+
+.footer-text, .footer-title {
+    color: var(--primary-text);
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+}
+
+.footer-list a {
+    text-decoration: none;
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-icon {
+    width: 16px;
+    height: 16px;
+}
+
