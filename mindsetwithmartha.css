@@ -285,17 +285,54 @@ h3 {
     background-color: var(--tertiary-bg);
 }
 
+.clients-header {
+    text-align: center;
+    margin-bottom: 56px;
+}
 
-.section-title {
-    display: flex;
-    justify-content: center;
+.section-title-clients {
     font-size: clamp(32px, 3.5vw, 52px);
     font-weight: 300;
     line-height: 1.15;
     color: var(--white-text);
-    border: 1px solid yellow;
-    margin-bottom: 20px;
+    margin: 0;
 }
+
+
+.heading-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 180px;
+    margin: 18px auto 0;
+}
+
+.heading-line {
+    flex: 1;
+    height: 1px;
+}
+
+.heading-line:first-of-type {
+    background: linear-gradient(to right,
+            rgba(245, 240, 232, 0.1),
+            rgba(245, 240, 232, 0.8));
+}
+
+.heading-line:last-of-type {
+    background: linear-gradient(to left,
+            rgba(245, 240, 232, 0.1),
+            rgba(245, 240, 232, 0.8));
+}
+
+.heading-diamond {
+    width: 8px;
+    height: 8px;
+    background: var(--white-text);
+    transform: rotate(45deg);
+    flex-shrink: 0;
+}
+
 
 .clients-wrapper {
     display: grid;
@@ -306,30 +343,95 @@ h3 {
 .client-card {
     display: flex;
     flex-direction: column;
-    border: 1px solid blue;
-    border-radius: 18px;
     padding: 36px 32px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
+    position: relative;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.001);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.client-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0.12),
+        transparent 35%
+    );
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+.client-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 30%,
+            rgba(111, 227, 197, 0.18),
+            transparent 90%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.client-card:hover::before {
+    opacity: 0.6;
+}
+
+.client-card:hover {
+    border: 0.5px solid var(--accent);
+    transform: translateY(-8px) scale(1.03);
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.5),
+        0, 0, 30px rgba(111, 227, 197, 0.2);
 }
 
 .client-card-title {
+    max-width: 60%;
     color: var(--white-text);
+    border-bottom: 1.5px solid var(--border-secondary);
+    padding-bottom: 10px;
     font-size: 24px;
     font-weight: 400;
+    margin-left: 6px;
+    margin-bottom: 20px;
 }
 
 .client-card-list {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    padding: 0;
+    margin: 0;
     list-style: none;
 }
 
+.circle-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: rgba(20, 184, 166, 0.10);
+    border: 1px solid rgba(20, 184, 166, 0.30);  
+}
+
 .client-card-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     list-style: none;
     color: var(--muted-text-primary);
     font-size: 14px;
     font-weight: 300;
     line-height: 1.5;
+    margin-bottom: 12px;
 }
 
 .quiz {
@@ -350,6 +452,16 @@ h3 {
 
 .outcomes {
     margin-bottom: 60px;
+}
+
+.section-title {
+    display: flex;
+    justify-content: center;
+    font-size: clamp(32px, 3.5vw, 52px);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--white-text);
+    border: 1px solid yellow;
 }
 
 
