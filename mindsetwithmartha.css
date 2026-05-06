@@ -438,16 +438,52 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 100px 40px;
 }
 
-.quiz-title,
-.quiz-text,
-.quiz-benefit {
+.quiz-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.quiz-title {
+    margin-bottom: 20px;
     color: var(--white-text);
+    font-size: clamp(32px, 3.5vw, 52px);
+    font-weight: 300;
+    line-height: 1.15;
+}
+
+
+.quiz-text {
+    color: var(--muted-text-primary);
+    margin-bottom: 32px;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.8;
 }
 
 .quiz-benefits {
     display: flex;
+    gap: 24px;
+    margin-bottom: 36px;
+}
+
+.quiz-benefit {
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--muted-text-primary);
+}
+
+.quiz-button {
+    border: 1px solid var(--accent);
+    border-radius: 5px;
+    background-color: var(--accent);
+    text-decoration: none;
+    padding: 15px 40px;
 }
 
 .outcomes {
