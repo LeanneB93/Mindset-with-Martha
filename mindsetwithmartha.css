@@ -439,6 +439,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     padding: 100px 40px;
+    border: 1px solid pink;
 }
 
 .quiz-wrapper {
@@ -457,6 +458,10 @@ h3 {
     line-height: 1.15;
 }
 
+.quiz-highlight {
+    color: var(--accent);
+}
+
 
 .quiz-text {
     color: var(--muted-text-primary);
@@ -470,6 +475,7 @@ h3 {
     display: flex;
     gap: 24px;
     margin-bottom: 36px;
+    list-style-type: none;
 }
 
 .quiz-benefit {
@@ -480,10 +486,13 @@ h3 {
 
 .quiz-button {
     border: 1px solid var(--accent);
+    text-transform: uppercase;
+    font-weight: 600;
     border-radius: 5px;
     background-color: var(--accent);
     text-decoration: none;
     padding: 15px 40px;
+    letter-spacing: 0.1em;
 }
 
 .outcomes {
