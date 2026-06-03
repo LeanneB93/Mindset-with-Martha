@@ -55,22 +55,6 @@ body {
     line-height: 1.5;
 }
 
-.nav-container,
-.hero-content,
-.partners-wrapper,
-.bio-wrapper,
-.podcast-inner,
-.services-wrapper,
-.sub-wrapper,
-.quiz-wrapper,
-.testimonials-wrapper,
-.newsletter-wrapper,
-.footer-grid {
-    max-width: 1280px;
-    width: 100%;
-    margin: 0 auto;
-}
-
 .site-header {
     background-color: var(--off-white-bg);
     position: sticky;
@@ -88,12 +72,15 @@ body {
 }
 
 .nav-container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 34px;
 }
-
 
 .nav-logo img {
     height: clamp(70px, 8vw, 100px);
@@ -108,7 +95,6 @@ body {
     margin: 0;
     list-style-type: none;
 }
-
 
 .nav-link {
     font-family: var(--font-secondary);
@@ -164,10 +150,13 @@ body {
     min-height: 90vh;
     background: var(--dark-accent);
     overflow: hidden;
-
 }
 
 .hero-content {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px;
     grid-column: 2/4;
     grid-row: 1;
     z-index: 2;
@@ -298,82 +287,95 @@ body {
     background-color: var(--mist-bg);
     border-top: 1px solid #E4E08D;
     border-bottom: 1px solid #E4E08D;
-    padding: 36px 0 44px;
+
 }
 
 .partners-wrapper {
-    border: 1px solid lime;
-    padding: clamp(28px, 3.4vw, 44px) 40px;
-}
-
-.partners-grid {
+    max-width: 1280px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1px 1.15fr;
-    gap: clamp(28px, 4vw, 64px);
+    grid-template-columns: 1fr 1px 1fr;
     align-items: center;
+    padding: 30px 10px;
+    gap: 0 60px;
+
 }
 
-.partner-col,
-.appearances-col {
-    border: 1px solid orange;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.partner-divider {
-    align-self: stretch;
-    width: 1px;
-    background: #E4E08D;
-}
-
-
-.logo-row {
-    width: 100%;
+.icon-container {
     display: flex;
     align-items: center;
-    gap: 20px
+    gap: 30px;
+    flex-wrap: wrap;
 }
-
-
-.logo-box {
-    border: 1px solid hotpink;
-    width: 200px;
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
 
 .logo-item {
-    border: 1px solid blueviolet;
     max-width: 100%;
-    max-height: 150px;
+    max-height: 140px;
     object-fit: contain;
     opacity: 0.9;
     display: block;
 }
 
+.partners-label {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.partners-icons {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.partners-wrapper__divider {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    align-self: stretch;
+    background: #E4E08D;
+}
+
+.featured-label {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.featured-icons {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
 .ufc {
-   max-height: 190px;
+    height: 300px;
+    margin-top: 6.5px;
+}
+
+.sporting-club-ireland {
+    height: 300px;
+}
+
+.irelandam {
+    height: 90px;
+}
+
+.spin {
+    height: 105px;
+}
+
+.newstalk {
+    height: 32px;
 }
 
 
-
-
 .bio {
-    position: sticky;
-    top: 0;
-    height: 70vh;
-    z-index: 10;
     padding: var(--section-padding);
     border-bottom: 1px solid #E4E0D8;
     background-color: var(--off-white-bg);
 }
 
 .bio-wrapper {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px;
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     gap: 80px;
@@ -386,6 +388,7 @@ body {
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-soft);
+    margin-top: 24px;
 }
 
 .martha-img {
@@ -466,15 +469,15 @@ body {
 
 
 .podcast {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    z-index: 10;
     background-color: var(--champagne-soft);
     padding: var(--section-padding);
 }
 
 .podcast-inner {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px;
     display: flex;
     flex-direction: column;
 }
@@ -631,12 +634,15 @@ body {
 
 
 .services {
-    position: sticky;
-    top: 0;
-    height: 80vh;
-    z-index: 10;
     background-color: var(--mist-bg);
     padding: var(--section-padding);
+}
+
+.services-wrapper {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px;
 }
 
 .services .section-title {
@@ -742,10 +748,6 @@ body {
 
 
 .subscription {
-    position: sticky;
-    top: 0;
-    height: 80vh;
-    z-index: 10;
     padding: clamp(80px, 9vw, 140px) 0;
     background: linear-gradient(160deg, #1B313A 0%, #16262E 100%);
     color: var(--on-dark);
@@ -753,6 +755,10 @@ body {
 }
 
 .sub-wrapper {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px;
     display: grid;
     grid-template-columns: 1fr 0.9fr;
     gap: 90px;
@@ -837,12 +843,14 @@ body {
     padding: var(--section-padding);
     background-color: var(--off-white-bg);
     border-bottom: 1px solid #E4E0D8;
-    position: relative;
-    z-index: 20;
+
 }
 
 .quiz-wrapper {
-    padding: 0 40px;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px;
 }
 
 .quiz-grid {
@@ -864,8 +872,6 @@ body {
     align-items: flex-start;
 }
 
-
-
 .quiz-title {
     max-width: 500px;
     margin-bottom: 24px;
@@ -879,14 +885,16 @@ body {
     font-size: 20px;
     line-height: 1.4;
     color: var(--dark-accent);
-    margin: 12px 0 10px;;
+    margin: 12px 0 10px;
+    ;
     text-align: start;
 }
 
 .quiz-text {
     max-width: 500px;
     font-family: var(--font-secondary);
-    font-size: 18px;;
+    font-size: 18px;
+    ;
     font-weight: 300;
     color: var(--primary-text);
     margin: 18px 0 34px;
@@ -1007,6 +1015,10 @@ body {
 }
 
 .newsletter-wrapper {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px;
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
@@ -1111,6 +1123,10 @@ body {
 }
 
 .footer-grid {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px;
     display: grid;
     grid-template-columns: 1.4fr 1fr 1fr 1.3fr;
     gap: 56px;
@@ -1176,3 +1192,7 @@ body {
     color: var(--steel-accent);
     background-color: var(--dark-accent);
 }
+
+@media (max-width: 800px) {}
+
+@media(max-width: 500px) {}
