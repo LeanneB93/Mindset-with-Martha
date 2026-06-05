@@ -1759,8 +1759,24 @@ body {
 
     .bio-wrapper {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 20px;
         padding: 0;
+    }
+
+    .bio-img {
+        margin: 0;
+    }
+
+    .eyebrow-row{
+        margin: 0 0 20px;
+    }
+
+    .bio-title {
+        margin: 0;
+    }
+
+    .bio-text {
+        margin: 0;
     }
 
     .martha-img {
@@ -1768,7 +1784,7 @@ body {
     }
 
     .podcast {
-        padding: 25px 0 0;
+        padding: 20px 0 0;
     }
 
     .podcast-inner .wrapper {
@@ -1777,22 +1793,46 @@ body {
 
     .podcast-wrapper {
         grid-template-columns: 1fr;
+        padding: 20px 12px;
+
+    }
+
+    .podcast-title {
+        margin: 0;
     }
 
     .podcast .main-section {
         padding: 0;
     }
 
-
-
-
     .podcast-header {
-    padding: 0 24px;
-        margin: 0 0 12px;
+    padding: 20px 12px;
+        margin: 0;
     }
 
     .podcast-header .eyebrow-row {
         justify-content: flex-start;
+    }
+
+    .eyebrow-sm {
+        margin: 20px 0 20px;
+    }
+
+    .podcast-heading {
+        margin: 0 0 20px;
+    }
+
+    .podcast-rule {
+        margin: 0 0 20px;
+    }
+
+    .podcast-text {
+        margin:0;
+        padding: 0 0 20px;
+    }
+
+    .button-spotify, .button-youtube {
+        margin:0;
     }
 
     .video-frame {
@@ -1808,6 +1848,14 @@ body {
         grid-template-columns: 1fr;
     }
 
+    .services-wrapper {
+        padding: 0;
+    }
+
+    .services .services-title {
+        margin: 20px 0;
+    }
+
     .service-card-title {
         margin-bottom: 0;
         margin-top: 10px;
@@ -1819,7 +1867,20 @@ body {
 
     .sub-wrapper {
         grid-template-columns: 1fr;
-        gap: 45px;
+        padding: 0;
+        gap: 20px;
+    }
+
+    .sub-title {
+        margin: 20px 0 20px;
+    }
+
+    .sub-script {
+        margin: 0;
+    }
+
+    .sub-text{
+        margin: 20px 0 20px;
     }
 
     .quiz-img {
