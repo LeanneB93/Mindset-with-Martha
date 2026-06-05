@@ -290,24 +290,23 @@ body {
     max-width: 1280px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 0.9fr 1px 1.1fr;
+    grid-template-columns: 0.7fr 1px 1.1fr;
     align-items: center;
     padding: 30px 10px;
-    gap: 0 60px;
+    gap: 0 35px;
 
 }
 
 .icon-container {
-    border: 1px solid lime;
     display: flex;
     align-items: center;
-    gap: 30px;
     flex-wrap: wrap;
+    gap: 40px;
 }
 
 .logo-item {
     max-width: 100%;
-    max-height: 140px;
+    max-height: 160px;
     object-fit: contain;
     opacity: 0.9;
     display: block;
@@ -321,6 +320,8 @@ body {
 .partners-icons {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
+    gap: 30px;
+
 }
 
 .partners-wrapper__divider {
@@ -341,23 +342,23 @@ body {
 }
 
 .ufc {
-    height: 300px;
+    height: clamp(95px, 10vw, 135px);
 }
 
 .sporting-club-ireland {
-    height: 280px;
+    height: clamp(85px, 9vw, 120px);
 }
 
 .irelandam {
-    height: 95px;
+    height: clamp(62px, 7vw, 93px);
 }
 
 .spin {
-    height: 105px;
+    height: clamp(70px, 8vw, 105px);
 }
 
 .newstalk {
-    height: 32px;
+    height: clamp(28px, 4vw, 35px);
 }
 
 
@@ -890,7 +891,6 @@ body {
     max-width: 500px;
     font-family: var(--font-secondary);
     font-size: 18px;
-    ;
     font-weight: 300;
     color: var(--primary-text);
     margin: 18px 0 34px;
@@ -915,9 +915,8 @@ body {
 
 .testimonials {
     background-color: #F8F4EC;
-    padding: 120px 60px;
+    padding: 80px 60px;
     position: relative;
-    z-index: 20;
 }
 
 .testimonials-wrapper {
@@ -927,94 +926,152 @@ body {
     padding: 12px;
 }
 
+.testimonials-header {
+    margin-bottom: 40px;
+}
+
 .testimonial-wall {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    gap: 20px;
-    
+    grid-template-columns: 0.85fr 1.05fr;
+    gap: 30px;
+    margin-top: 36px;
 }
 
-.testimonials-header {
-    margin-bottom: 36px;
+.testimonial-video-frame {
+    border-radius: 22px;
+    aspect-ratio: 2/3;
+    width: 90%;
+    overflow: hidden;
+    background: linear-gradient(150deg, #24454D 0%, #16262E 72%);
+    box-shadow: 0 18px 50px rgba(22, 38, 46, .12), inset 0 0 0 1px rgba(255, 255, 255, .08);
 }
 
+.testimonial-video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
 
-.testimonial-cards {
+}
+
+.testimonial-list {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    border: 1px solid #E4E0D8;
-    box-shadow: 0 4px 14px rgba(22, 38, 46, .07), 0 10px 30px rgba(22, 38, 46, .06);
-    border-radius: 14px;
-    background-color: var(--white-accent);
-    padding: 24px;
-    overflow: hidden;
+    justify-content: center;
 }
 
-.client-card-1 {
-    grid-column: 1/2;
-    grid-row: 1/2;
+.testimonial-card {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    padding: 16px 0;
+    border-top: 1px solid #C9BBA8
 }
 
-.client-card-2 {
-    grid-column: 2/3;
-    grid-row: 1/2;
+.testimonial-avatar {
+    flex: 0 0 auto;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    border: 1px solid #C9BBA8;
+    display: grid;
+    place-items: center;
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    color: var(--sand, #B8A88E);
 }
 
-.client-card-3 {
-    grid-column: 3/4;
-    grid-row: 1/2;
+.testimonial-body {
+    flex: 1;
+    min-width: 0;
 }
 
-.client-card-4 {
-    grid-column: 1/2;
-    grid-row: 2/3;
-}
 
-.client-card-5 {
-    grid-column: 2/3;
-    grid-row: 2/3;
-}
-
-.client-card-6 {
-    grid-column: 3/4;
-    grid-row: 2/3;
-}
 
 .testimonial-quote {
     font-family: var(--font-primary);
     font-style: italic;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 1.42;
+    font-size: 17px;
+    line-height: 1.5;
     color: var(--primary-text);
     margin: 0;
 }
 
 
+.expandable .testimonial-quote {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.expandable .exp-toggle:checked~.testimonial-quote {
+    -webkit-line-clamp: unset;
+}
+
+.exp-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 11px;
+    cursor: pointer;
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    color: var(--teal-accent);
+    transition: gap 0.2s ease;
+}
+
+
+.exp-more::before {
+    content: "READ FULL";
+}
+
+.exp-toggle:checked~.exp-more::before {
+    content: 'SHOW LESS';
+}
+
+.exp-more::after {
+    content: '⌄';
+    position: relative;
+    top: -2px;
+}
+
+
+.testimonial-cite {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+
 .testimonial-name {
     font-family: var(--font-secondary);
-    font-weight: 500;
-    font-size: 15px;
-    letter-spacing: 0.04em;
-    color: var(--teal-accent);
-    margin: 10px 0 0 0;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: var(--dark-accent);
+    margin: 10px 0 0;
 }
 
 
 .testimonial-role {
     font-family: var(--font-secondary);
-    font-weight: 500;
+    font-weight: 400;
     font-size: 13px;
     letter-spacing: 0.14em;
-    color: var(--dark-accent);
-    margin-top: 0px;
-}
-
-.testimonial-role {
+    color: #8A9499;
+    margin: 4px 0 0;
     opacity: 0.75;
 }
+
+
 
 
 
@@ -1129,7 +1186,7 @@ body {
 
 .footer {
     background-color: var(--dark-accent);
-    padding: 72px 0px 40px;
+    padding: 50px 0px 20px;
     position: relative;
     z-index: 20;
 }
@@ -1141,7 +1198,7 @@ body {
     padding: 12px;
     display: grid;
     grid-template-columns: 1.4fr 1fr 1fr 1.3fr;
-    gap: 56px;
+    gap: 40px;
 }
 
 
@@ -1153,7 +1210,7 @@ body {
 .footer-logo-text {
     font-family: var(--font-tertiary);
     font-size: 30px;
-    line-height: 1.1rem;
+    line-height: 1.5rem;
     margin: 18px 0 0;
     color: var(--steel-accent);
 
@@ -1175,6 +1232,12 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .footer-list a,
@@ -1200,52 +1263,96 @@ body {
 .footer-icon {
     width: 17px;
     height: 17px;
+    display: block;
     flex-shrink: 0;
-    color: var(--steel-accent);
-    background-color: var(--dark-accent);
 }
 
 .socials {
     display: flex;
-    align-items: center;
     gap: 12px;
+    margin-top: 12px;
 }
 
-
-.instagram {
-    height: 20px;
+.social-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: all 0.3s ease;
 }
 
-.linkedin {
+.social-circle:hover {
+    transform: translateY(-2px);
+    background: var(--steel-accent);
+}
+
+.instagram-icon {
+    height: 21px;
+}
+
+.linkedin-icon {
     height: 16px;
 }
 
-.spotify {
-    height: 18px;
+@media (max-width: 985px) {
+    .partners-wrapper {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 40px 24px;
+    }
+
+    .partners-label,
+    .partners-icons,
+    .partners-wrapper__divider,
+    .featured-label,
+    .featured-icons {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .partners-label,
+    .featured-label {
+        justify-content: center;
+    }
+
+    .partners-icons,
+    .featured-icons {
+        justify-content: center;
+        gap: 100px;
+    }
+
+
+    .partners-wrapper__divider {
+        width: 100%;
+        height: 1px;
+        background: var(--teal-accent);
+        margin: 8px 0;
+    }
+
+    .ufc {
+        height: clamp(115px, 10vw, 180px);
+    }
+
+    .sporting-club-ireland {
+        height: clamp(105px, 9vw, 160px);
+    }
+
+    .irelandam {
+        height: clamp(75px, 7vw, 100px);
+    }
+
+    .spin {
+        height: clamp(85px, 8vw, 120px);
+    }
+
+    .newstalk {
+        height: clamp(28px, 3vw, 40px);
+    }
 }
-
-
-
-/*.ufc {
-    height: 300px;
-}
-
-.sporting-club-ireland {
-    height: 280px;
-}
-
-.irelandam {
-    height: 95px;
-}
-
-.spin {
-    height: 105px;
-}
-
-.newstalk {
-    height: 32px;
-}*/
-
 
 
 
@@ -1254,29 +1361,45 @@ body {
 
     .wrapper {
         max-width: 800px;
+        padding: 0px 12px;
     }
 
     .hero-content {
         padding: 0;
     }
+
     .partners-wrapper {
-        grid-template-columns: 1fr;
-        gap: 24px;
+        padding: 20px 12px;
+        gap: 20px;
     }
 
-    
+    .icon-container {
+        justify-content: center;
+        gap: 30px;
+    }
 
-
-    .logo-item {
-        max-height: 100px;
+    .partners-label {
+        margin: 0 0 10px;
     }
 
     .ufc {
-        height: 100px;
+        height: clamp(115px, 10vw, 160px);
+    }
+
+    .sporting-club-ireland {
+        height: clamp(105px, 9vw, 140px);
+    }
+
+    .irelandam {
+        height: clamp(75px, 2vw, 80px);
+    }
+
+    .spin {
+        height: clamp(85px, 7vw, 90px);
     }
 
     .newstalk {
-        height: 25px;
+        height: clamp(20px, 5vw, 25px);
     }
 
     .bio-wrapper {
@@ -1296,7 +1419,12 @@ body {
         width: 100%;
     }
 
-    .services-grid {
+    .podcast-wrapper,
+    .services-grid,
+    .quiz-grid,
+    .testimonial-wall,
+    .newsletter-wrapper,
+    .footer-grid {
         grid-template-columns: 1fr;
     }
 
@@ -1314,41 +1442,56 @@ body {
         gap: 45px;
     }
 
-    .quiz-grid {
-        grid-template-columns: 1fr;
+    .testimonial-video-frame {
+        width: 100%;
     }
 
-    .newsletter-wrapper {
-        grid-template-columns: 1fr;
+    .footer-grid-wrapper {
+        gap: 10px;
     }
 
 }
 
 @media(max-width: 500px) {
 
-    .wrapper{
+    .wrapper {
         max-width: 500px;
     }
 
-    .nav-link {
-        font-size: 2px;
-    }
 
     .hero-content {
         padding: 0;
     }
 
-    .partners-wrapper {
+    .featured-dark {
+        margin-top: 15px;
+    }
+
+    .icon-container {
         gap: 20px;
     }
 
-    .newstalk {
-        height: 24px;
+
+    .ufc {
+        height: clamp(70px, 8vw, 160px);
     }
 
-    .bio {
-        padding: 55px 0;
+    .sporting-club-ireland {
+        height: clamp(80px, 7vw, 140px);
     }
+
+    .irelandam {
+        height: clamp(50px, 2vw, 80px);
+    }
+
+    .spin {
+        height: clamp(60px, 5vw, 90px);
+    }
+
+    .newstalk {
+        height: clamp(15px, 4vw, 25px);
+    }
+
 
     .podcast {
         padding: 55px 0;
@@ -1371,9 +1514,7 @@ body {
         padding-top: 40px;
     }
 
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
+
 
 
 }
