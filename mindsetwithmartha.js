@@ -100,3 +100,20 @@ const renderQuizResult = () => {
   quizResultRingProgress.style.strokeDasharray = `${circumference}`
   quizResultRingProgress.style.strokeDashoffset = `${circumference * (1 - score / MAX_SCORE)}`
 }
+
+const burger = document.querySelector(".burger")
+const navMenu = document.getElementById("primary-nav")
+
+const setNavMenuOpen = (isOpen) => {
+  burger.setAttribute("aria-expanded", String(isOpen))
+  burger.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation")
+  navMenu.classList.toggle("is-open", isOpen)
+}
+
+burger.addEventListener("click", () => {
+  setNavMenuOpen(burger.getAttribute("aria-expanded") !== "true")
+})
+
+navMenu.addEventListener("click", (event) => {
+  if (event.target.closest("a")) setNavMenuOpen(false)
+})
