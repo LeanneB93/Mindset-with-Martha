@@ -101,7 +101,7 @@ body {
 }
 
 .nav-logo img {
-    height: clamp(70px, 8vw, 100px);
+    height: clamp(80px, 8vw, 120px);
     width: auto;
 }
 
@@ -267,6 +267,7 @@ body {
     align-items: center;
     min-height: 90vh;
     background: var(--dark-accent);
+    position: relative;
     overflow: hidden;
 }
 
@@ -274,11 +275,11 @@ body {
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
-    padding: 12px;
+    padding: 0 40px;
     grid-column: 2/4;
     grid-row: 1;
     z-index: 2;
-    padding: 0 40px;
+
 }
 
 .eyebrow-row {
@@ -303,10 +304,9 @@ body {
 }
 
 .hero-title {
-    max-width: 650px;
-    margin: 0 0 22px;
+    margin: 0 0 35px;
     font-family: var(--font-primary);
-    font-size: clamp(48px, 6vw, 76px);
+    font-size: clamp(45px, 6vw, 76px);
     font-weight: 300;
     line-height: 1.04;
     letter-spacing: -0.02em;
@@ -318,11 +318,10 @@ body {
 }
 
 .hero-text {
-    max-width: 520px;
     margin: 0 0 34px;
     color: var(--on-dark-soft-accent);
     font-family: var(--font-secondary);
-    font-size: clamp(18px, 2vw, 22px);
+    font-size: clamp(15px, 2vw, 22px);
     font-weight: 300;
     line-height: 1.65;
 }
@@ -339,7 +338,8 @@ body {
     width: fit-content;
     background-color: var(--teal-accent);
     color: var(--white-accent);
-    padding: 14px 32px;
+    font-size: clamp(10px, 1.1vw, 13px);
+    padding: clamp(11px, 1.2vw, 14px) clamp(20px, 2.5vw, 32px);
 }
 
 .hero-button-icon {
@@ -371,7 +371,7 @@ body {
     position: relative;
 }
 
-.hero-img-container img {
+.hero-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -396,7 +396,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(22, 38, 46, 0.08);
+    background: rgba(22, 38, 46, 0.1);
     pointer-events: none;
 }
 
@@ -528,7 +528,7 @@ body {
     color: var(--dark-accent);
     font-family: var(--font-primary);
     font-weight: 400;
-    font-size: clamp(32px, 4vw, 48px);
+    font-size: clamp(32px, 3vw, 48px);
     line-height: 1.08;
     letter-spacing: -0.01em;
 }
@@ -1044,7 +1044,7 @@ body {
 
 .testimonials {
     background-color: #F8F4EC;
-    padding: 80px 60px;
+    padding: var(--section-padding);
     position: relative;
 }
 
@@ -1630,6 +1630,16 @@ body {
     .nav-button {
         justify-content: center;
     }
+
+    .podcast-inner {
+        padding: 0;
+        margin: 0;
+        
+        .podcast-wrapper {
+            width: 100%;
+            border-radius: unset;
+        }
+    }
 }
 
 @media (max-width: 985px) {
@@ -1686,6 +1696,8 @@ body {
     .newstalk {
         height: clamp(28px, 3vw, 40px);
     }
+
+
 }
 
 
@@ -1695,9 +1707,21 @@ body {
 
     .wrapper {
         max-width: 800px;
-        padding: 0px 12px;
     }
 
+    .main-section,
+    .footer {
+        padding: 20px 12px;
+    }
+
+    .hero-content {
+        grid-column: 2 / 4;
+        padding: 0;
+    }
+
+    .hero-button {
+        text-align: center;
+    }
 
     .partners-wrapper {
         padding: 20px 12px;
@@ -1736,14 +1760,39 @@ body {
     .bio-wrapper {
         grid-template-columns: 1fr;
         gap: 40px;
+        padding: 0;
     }
 
     .martha-img {
         object-position: center 35%;
     }
 
+    .podcast {
+        padding: 25px 0 0;
+    }
+
+    .podcast-inner .wrapper {
+        padding: 0;
+    }
+
     .podcast-wrapper {
         grid-template-columns: 1fr;
+    }
+
+    .podcast .main-section {
+        padding: 0;
+    }
+
+
+
+
+    .podcast-header {
+    padding: 0 24px;
+        margin: 0 0 12px;
+    }
+
+    .podcast-header .eyebrow-row {
+        justify-content: flex-start;
     }
 
     .video-frame {
@@ -1773,6 +1822,10 @@ body {
         gap: 45px;
     }
 
+    .quiz-img {
+        margin-top: 0;
+    }
+
     .testimonial-video-frame {
         width: 100%;
     }
@@ -1783,93 +1836,20 @@ body {
 
 }
 
-@media (max-width: 800px) {
-    .wrapper {
-        max-width: 800px;
-    }
-
-    .wrapper {
-        max-width: 500px;
-    }
 
 
-    .ufc {
-        height: 100px;
-    }
-
-    .featured-dark {
-        margin-top: 15px;
-    }
-
-    .icon-container {
-        gap: 20px;
-    }
-
-
-    .ufc {
-        height: clamp(70px, 8vw, 160px);
-    }
-
-    .sporting-club-ireland {
-        height: clamp(80px, 7vw, 140px);
-    }
-
-    .irelandam {
-        height: clamp(50px, 2vw, 80px);
-    }
-
-    .spin {
-        height: clamp(60px, 5vw, 90px);
-    }
-
-    .newstalk {
-        height: clamp(15px, 4vw, 25px);
-    }
-
-
-    .podcast {
-        padding: 55px 0;
-    }
-
-    .video-frame {
-        width: 100%;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .service-card-title {
-        margin-bottom: 0;
-        margin-top: 10px;
-    }
-
-    .service-card-text {
-        margin-top: 0;
-    }
-
-    .sub-wrapper {
-        grid-template-columns: 1fr;
-        gap: 45px;
-    }
-
-
-    .newsletter-wrapper {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 500px) {
-    .wrapper {
-        max-width: 500px;
-    }
-
-    .nav-link {
-        font-size: 2px;
-    }
+@media (max-width: 540px) {
 
     .hero-content {
-        padding: 0;
+        grid-column: 2 / 5;
+    }
+
+    .hero-img-container::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(22, 38, 46, 0.4);
+        pointer-events: none;
     }
 
     .partners-wrapper {
@@ -1880,29 +1860,15 @@ body {
         height: 24px;
     }
 
-    .bio {
-        padding: 55px 0;
-    }
-
-    .podcast {
-        padding: 55px 0;
-    }
-
-    .services {
-        padding: 55px 0;
-    }
-
     .quiz {
-        padding: 0 12px 55px;
+        padding-top: 0
     }
 
-    .newsletter {
-        padding: 55px 0;
+    .quiz-img {
+        height: 300px;
+        margin-top: 20px;
     }
 
-    .footer {
-        padding-top: 40px;
-    }
 
     .footer-grid {
         grid-template-columns: 1fr;
