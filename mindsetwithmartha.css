@@ -304,7 +304,7 @@ body {
 }
 
 .hero-title {
-    margin: 0 0 35px;
+    margin: 0 0 25px;
     font-family: var(--font-primary);
     font-size: clamp(45px, 6vw, 76px);
     font-weight: 300;
@@ -340,6 +340,7 @@ body {
     color: var(--white-accent);
     font-size: clamp(10px, 1.1vw, 13px);
     padding: clamp(11px, 1.2vw, 14px) clamp(20px, 2.5vw, 32px);
+    margin-bottom: 60px;
 }
 
 .hero-button-icon {
@@ -1064,13 +1065,13 @@ body {
     grid-template-columns: 0.85fr 1.05fr;
     gap: 30px;
     margin-top: 36px;
-    align-items: stretch;
+   
 }
 
 .testimonial-video-frame {
     border-radius: 22px;
     aspect-ratio: 2/3;
-    width: 90%;
+    width: 100%;
     overflow: hidden;
     background: linear-gradient(150deg, #24454D 0%, #16262E 72%);
     box-shadow: 0 18px 50px rgba(22, 38, 46, .12), inset 0 0 0 1px rgba(255, 255, 255, .08);
@@ -1634,7 +1635,7 @@ body {
     .podcast-inner {
         padding: 0;
         margin: 0;
-        
+
         .podcast-wrapper {
             width: 100%;
             border-radius: unset;
@@ -1719,6 +1720,10 @@ body {
         padding: 0;
     }
 
+    .hero-text {
+        margin: 0 0 20px;
+    }
+
     .hero-button {
         text-align: center;
     }
@@ -1767,7 +1772,7 @@ body {
         margin: 0;
     }
 
-    .eyebrow-row{
+    .eyebrow-row {
         margin: 0 0 20px;
     }
 
@@ -1806,7 +1811,7 @@ body {
     }
 
     .podcast-header {
-    padding: 20px 12px;
+        padding: 20px 12px;
         margin: 0;
     }
 
@@ -1827,12 +1832,13 @@ body {
     }
 
     .podcast-text {
-        margin:0;
+        margin: 0;
         padding: 0 0 20px;
     }
 
-    .button-spotify, .button-youtube {
-        margin:0;
+    .button-spotify,
+    .button-youtube {
+        margin: 0;
     }
 
     .video-frame {
@@ -1857,13 +1863,22 @@ body {
     }
 
     .service-card-title {
-        margin-bottom: 0;
-        margin-top: 10px;
+        margin: 20px 0 0;
+    }
+
+    .service-icon-tile {
+        margin: 0 0 20px;
     }
 
     .service-card-text {
-        margin-top: 0;
+        margin: 0 0 20px;
     }
+
+    .services-link {
+        margin: 0;
+    }
+
+    
 
     .sub-wrapper {
         grid-template-columns: 1fr;
@@ -1879,7 +1894,7 @@ body {
         margin: 0;
     }
 
-    .sub-text{
+    .sub-text {
         margin: 20px 0 0;
     }
 
@@ -1945,12 +1960,25 @@ body {
         margin: 0;
     }
 
-   .form-title {
-    
-   }
+    .form-title {
+        margin: 0 0 20px;
+    }
+
+    .newsletter-button {
+        margin: 0;
+    }
 
     .footer-grid-wrapper {
-        gap: 10px;
+        padding: 0;
+        gap: 20px;
+    }
+
+    .footer-logo-text {
+        margin: 10px 0 0;
+    }
+
+    .footer-title {
+        margin: 0 0 20px;
     }
 
 }
@@ -1959,9 +1987,9 @@ body {
 
 @media (max-width: 540px) {
 
-    .hero-content {
+  /*  .hero-content {
         grid-column: 2 / 5;
-    }
+    }*/
 
     .hero-img-container::after {
         content: "";
@@ -1970,6 +1998,33 @@ body {
         background: rgba(22, 38, 46, 0.4);
         pointer-events: none;
     }
+
+
+        .hero {
+            height: 620px;
+            min-height: 0;
+        grid-template-columns:
+            20px
+            1fr
+            20px;
+    }
+
+    .hero-content {
+        grid-column: 2;
+        max-width: 320px;
+    }
+
+    .hero-img-container {
+        grid-column: 1 / 4;
+       
+    }
+
+    .hero-button {
+        margin-bottom: 120px;
+    }
+
+
+
 
     .partners-wrapper {
         gap: 20px;
