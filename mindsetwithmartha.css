@@ -1880,11 +1880,35 @@ body {
     }
 
     .sub-text{
+        margin: 20px 0 0;
+    }
+
+    .quiz-wrapper {
+        padding: 0;
+    }
+
+    .quiz-grid {
+        gap: 20px;
+    }
+
+    .quiz-title {
+        margin: 0 0 20px;
+    }
+
+    .quiz-subtitle {
+        margin: 0;
+    }
+
+    .quiz-text {
         margin: 20px 0 20px;
     }
 
     .quiz-img {
         margin-top: 0;
+    }
+
+    .testimonials-wrapper {
+        padding: 0;
     }
 
     .testimonial-video-frame {
