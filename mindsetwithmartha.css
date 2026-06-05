@@ -1911,9 +1911,43 @@ body {
         padding: 0;
     }
 
+    .testimonial-wall {
+        margin: 0;
+        gap: 20px;
+    }
+
+    .testimonials-header {
+        margin: 0;
+    }
+
+    .testimonials-title {
+        margin: 20px 0 20px;
+    }
+
     .testimonial-video-frame {
         width: 100%;
     }
+
+    .testimonial-card {
+        padding: 20px 0;
+    }
+
+    .newsletter-wrapper {
+        gap: 20px;
+        padding: 0;
+    }
+
+    .newsletter-title {
+        margin: 0 0 20px;
+    }
+
+    .newsletter-text {
+        margin: 0;
+    }
+
+   .form-title {
+    
+   }
 
     .footer-grid-wrapper {
         gap: 10px;
