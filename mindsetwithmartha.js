@@ -2,11 +2,13 @@ const quizButton = document.getElementById("start-quiz-button")
 const quizModalBackdrop = document.getElementById("quiz-modal-backdrop")
 const quizModalContainer = document.getElementById("quiz-modal-container")
 const quizModalForm = document.getElementById("quiz-modal")
+const quizModalCloseButton = document.getElementById("quiz-modal__close-button")
 const quizModalPreviousButton = document.getElementById("quiz-modal__previous-button")
 const quizModalNextButton = document.getElementById("quiz-modal__next-button")
 const quizResultScore = document.getElementById("quiz-result-score")
 const quizResultZone = document.getElementById("quiz-result-zone")
 const quizResultRingProgress = document.querySelector(".quiz-result__ring-progress")
+const quizNav = document.getElementById("quiz-nav")
 
 const TOTAL_QUESTIONS = 12
 const RESULT_VIEW = TOTAL_QUESTIONS + 1
@@ -48,6 +50,10 @@ quizModalBackdrop.addEventListener("click", (event) => {
   if (event.target === quizModalBackdrop) setState({ isQuizModalOpen: false, quizModalCurrentView: 1 })
 })
 
+quizModalCloseButton.addEventListener("click", () => {
+  setState({ isQuizModalOpen: false, quizModalCurrentView: 1 })
+})
+
 quizModalForm.addEventListener("change", (event) => {
   const { name, value } = event.target
   setState({ quizModalAnswers: { ...state.quizModalAnswers, [name]: value } })
@@ -72,7 +78,12 @@ const render = () => {
 
   quizModalNextButton.disabled = onResultView || !state.quizModalAnswers[`question-${state.quizModalCurrentView}`]
 
-  if (onResultView) renderQuizResult()
+  if (onResultView) {
+    renderQuizResult()
+    quizNav.style.display = "none"
+  } else {
+    quizNav.style.display = "flex"
+  }
 }
 
 const toggleQuizModalView = () => {
